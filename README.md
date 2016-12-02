@@ -1,7 +1,7 @@
 # konpe
+[![Build Status](https://travis-ci.org/cuken/Konpe.svg?branch=master)](https://travis-ci.org/cuken/Konpe)
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+A competitive tracker to record events against your friends.
 
 ## Prerequisites
 
