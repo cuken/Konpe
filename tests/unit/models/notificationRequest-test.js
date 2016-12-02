@@ -1,6 +1,6 @@
 import { moduleForModel, test } from 'ember-qunit';
 
-moduleForModel('subscription', 'Unit | Model | subscription', {
+moduleForModel('notificationRequest', 'Unit | Model | notificationRequest', {
   // Specify the other units that are required for this test.
   needs: []
 });

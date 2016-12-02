@@ -12,9 +12,9 @@ export default Ember.Controller.extend({
         saveEmail() {
             const email = this.get('emailAddress');
 
-            const subscription = this.store.createRecord('subscription', { email: email });
+            const newNotificationRequest = this.store.createRecord('notification-request', { email: email });
 
-            subscription.save().then((response) => {
+            newNotificationRequest.save().then((response) => {
                 this.set('responseMessage', `Thank you! We've just saved your email address: ${this.get('emailAddress')} ID: ${response.get('id')}`);
                 this.set('emailAddress', '');
             }); 

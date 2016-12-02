@@ -9,6 +9,10 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('about');
   this.route('contact');
+
+  this.route('admin', function() {
+    this.route('notification-requests');
+  });
 });
 
 export default Router;
