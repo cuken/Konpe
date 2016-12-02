@@ -11,7 +11,7 @@ export default Ember.Controller.extend({
         saveEmail() {
             //Logic for saving the email to db.
             this.set('responseMessage', `Thank you! We've just saved your email address: ${this.get('emailAddress')}`);
-            this.set('emailAddress', '');
+            this.set('emailAddress', '');            
         }
     }
 
