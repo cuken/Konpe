@@ -17,10 +17,6 @@ export default Ember.Controller.extend({
             this.set('emailAddress', '');
             this.set('inputComment', '');
         }
-
+        
     }
-
-    
-
-
 });
