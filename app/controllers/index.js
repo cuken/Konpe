@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
 
+    headerMessage: 'Coming Soon',
     emailAddress: '',
     
     isValid: Ember.computed.match('emailAddress', /^.+@.+\..+$/),
@@ -9,10 +10,14 @@ export default Ember.Controller.extend({
     
     actions: {
         saveEmail() {
-            //Logic for saving the email to db.
-            this.set('responseMessage', `Thank you! We've just saved your email address: ${this.get('emailAddress')}`);
-            this.set('emailAddress', '');
+            const email = this.get('emailAddress');
+
+            const newNotificationRequest = this.store.createRecord('notification-request', { email: email });
+
+            newNotificationRequest.save().then((response) => {
+                this.set('responseMessage', `Thank you! We've just saved your email address: ${this.get('emailAddress')} ID: ${response.get('id')}`);
+                this.set('emailAddress', '');
+            }); 
         }
     }
-
 });
